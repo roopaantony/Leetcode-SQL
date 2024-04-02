@@ -1,5 +1,4 @@
-SELECT employee.name AS Employee 
-FROM Employee manager
-JOIN Employee employee
-on manager.id= employee.managerID
-and manager.SALARY < employee.SALARY
+SELECT E2.name as Employee
+FROM Employee E1, Employee E2
+WHERE E1.id = E2.managerId
+AND E1.salary < E2.salary
