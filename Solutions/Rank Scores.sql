@@ -1,5 +1,5 @@
 --MS SQL Server
---DENSE_RANK() supported in MYSQL 8.0 or lated. Older versions it is not supported
+--DENSE_RANK() supported in MYSQL 8.0 or later. Older versions it is not supported
 SELECT score, 
 DENSE_RANK() OVER (ORDER BY score DESC) as rank
 FROM Scores
