@@ -12,6 +12,6 @@ SELECT score,
 @rank := CASE WHEN @prev = score THEN @rank ELSE @rank + 1 END as rank_score,
 @prev := score
 FROM Scores,
-(SELECT @prev:=-1, @rank:=0) init
+(SELECT @rank:=0, @prev:=NULL) init
 ORDER BY score Desc
 ) AS A;
